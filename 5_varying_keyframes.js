@@ -16,15 +16,20 @@ const rightX = sizeStage.width - sizeBall.width;
 const centerY = sizeStage.height / 2 - sizeBall.height / 2;
 const bottomY = sizeStage.height - sizeBall.height;
 
+/*const centerXx = (sizeStage.width - sizeBall.width) / 2;
+const rightXx = (sizeStage.width - sizeBall.width) / 2;
+const centerYy = (sizeStage.height - sizeBall.height) / 2;
+const bottomYy = (sizeStage.height - sizeBall.height) / 2;
+*/
 console.log(centerX);
-console.log(sizeStage);
+//console.log(centerXx);
 
 const keyframes = [
-  { transform: "translate(42vw, 0vw)" },
-  { transform: "translate(85vw, 20vw)" },
-  { transform: "translate(42vw, 41vw" },
-  { transform: "translate(0vw, 20vw" },
-  { transform: "translate(42vw, 0vw)" },
+  { transform: `translate(${centerX}px, ${0})` },
+  { transform: `translate(${rightX}px, ${centerY}px` },
+  { transform: `translate(${centerX}px, ${bottomY}px` },
+  { transform: `translate(${0}px, ${centerY}px` },
+  { transform: `translate(${centerX}px, ${0})` },
 ];
 
 const animation = ball.animate(keyframes, properties);
